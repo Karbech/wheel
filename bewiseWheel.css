@@ -1,0 +1,413 @@
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ----- start of text_field_styling.css ----- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+.input-effect input[type="text"]{
+  font: 15px/24px 'Muli', sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  /* background color to make text more visible over textile background */
+  background-color: rgba(239, 239, 239, 0.6);
+  outline: none;
+}
+
+.input-effect-div{
+  width: 100%;
+  margin: auto;
+  position: relative;
+} /* necessary to give position: relative to parent. */
+
+.input-effect input[type="text"]{
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.effect-21{
+  border: 1px solid #ccc;
+  padding: 7px 14px;
+  transition: 0.4s;
+  background: transparent;
+}
+
+.effect-21 ~ .focus-border:before,
+.effect-21 ~ .focus-border:after{
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 0;
+  height: 2px;
+  /* background-color: #4caf50; */
+  background-color: #65c8c7;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+.effect-21 ~ .focus-border:after{
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  transition-delay: 0.6s;
+}
+.effect-21 ~ .focus-border i:before,
+.effect-21 ~ .focus-border i:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  /* background-color: #4caf50; */
+  background-color: #65c8c7;
+  transition: 0.2s;
+}
+.effect-21 ~ .focus-border i:after{
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  transition-delay: 0.4s;
+}
+.effect-21:focus ~ .focus-border:before,
+.effect-21:focus ~ .focus-border:after,
+.has-content.effect-21 ~ .focus-border:before,
+.has-content.effect-21 ~ .focus-border:after{
+  width: 100%;
+  transition: 0.2s;
+  transition-delay: 0.6s;
+}
+.effect-21:focus ~ .focus-border:after,
+.has-content.effect-21 ~ .focus-border:after{
+  transition-delay: 0.2s;
+}
+.effect-21:focus ~ .focus-border i:before,
+.effect-21:focus ~ .focus-border i:after,
+.has-content.effect-21 ~ .focus-border i:before,
+.has-content.effect-21 ~ .focus-border i:after{
+  height: 100%;
+  transition: 0.2s;
+}
+.effect-21:focus ~ .focus-border i:after,
+.has-conten.effect-21 ~ .focus-border i:after{
+  transition-delay: 0.4s;
+}
+.effect-21 ~ label{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 10px;
+  color: #aaa;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+.effect-21:focus ~ label, .has-content.effect-21 ~ label{
+  top: -18px;
+  left: 0;
+  font-size: 12px;
+  /* color: #4caf50; */
+  color: #65c8c7;
+  transition: 0.3s;
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ----- end of text_field_styling.css ----- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+
+/* ----------------------------------- */
+/* ----------------------------------- */
+/* ----- start of beSpinning.css ----- */
+/* ----------------------------------- */
+/* ----------------------------------- */
+
+#wheel{
+  display:inline-block;
+  position:relative;
+  /* overflow:hidden; */
+  margin-top: 25px;
+  margin-bottom: 25px;
+  z-index: 1;
+}
+.wheelShadow{
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+  -webkit-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.5);
+}
+.arrow{
+  content:"";
+  background:#baa5cf;
+  border:2px solid white;
+  position:absolute;
+  top:-22px;
+  left:48%;
+  width:22px;
+  height:22px;
+  margin-left:-7px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  transform: rotate(45deg);
+  z-index: 999;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
+}
+.wheelContainer{
+  text-align:center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  /* background image of the modal */
+  background-image: url("img/textileBackground.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+.textDiv{
+  width: 80%;
+  margin: auto;
+  padding-top: 25px;
+  display: inline-block;
+}
+.buttonDiv{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 25px;
+  padding-top: 25px;
+  display: inline-block;
+}
+.checkboxContainer{
+  position: relative;
+  display: inline-block;
+  width: 75%;
+  height: auto;
+  margin: auto;
+}
+.checkboxDiv{
+  height: 100%;
+  width: auto;
+  float: left;
+}
+.checkboxTextDiv{
+  height: 100%;
+  width: 90%;
+  clear: right;
+  float: right;
+  text-align: left;
+}
+.messageDiv{
+  width: 100%;
+  height: auto;
+}
+.btnStop{
+  width: 100%;
+  /*background-color: #4CAF50; */ /* Green */
+  background-color: #65c8c7;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+#txtSmall{
+  padding: 0;
+  margin: 0;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#wheelResult{
+  margin: 15px 20px 0 20px;
+  /* color to make font more visible over textile background */
+  background-color: rgba(239, 239, 239, 0.6);
+}
+.latoFont{
+  font: 15px "Lato", sans-serif;
+}
+
+/* --------------------------------- */
+/* --------------------------------- */
+/* ----- end of beSpinning.css ----- */
+/* --------------------------------- */
+/* --------------------------------- */
+
+
+
+/* -------------------------------- */
+/* -------------------------------- */
+/* ----- start of bePopup.css ----- */
+/* -------------------------------- */
+/* -------------------------------- */
+
+/* -------------------------- */
+/* ----- start of modal ----- */
+/* -------------------------- */
+
+
+/* The Modal (background) */
+.popupContainer {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99999; /* Sit on top */
+  padding-top: 25px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.popupContent {
+  position: absolute;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  left: 15px;
+  bottom: 0;
+  border: 5px solid #65c8c7;
+  width: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {bottom:-300px; opacity:0}
+  to {bottom:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {bottom:-300px; opacity:0}
+  to {bottom:0; opacity:1}
+}
+
+/* The Close Button */
+.closePopup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 10;
+  color: grey;
+}
+
+.closePopup:hover,
+.closePopup:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnOpenModal{
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  /*background-color: #4CAF50; */ /* Green */
+  background-color: #65c8c7;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.noMargin{
+  margin: 0 !important;
+}
+
+/* -------------------------- */
+/* ----- end of modal ----- */
+/* -------------------------- */
+
+
+
+/* --------------------------------------- */
+/* ----- terms and conditions pop-up ----- */
+/* --------------------------------------- */
+
+/* The actual popup (appears on top) */
+.popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  font-size: 11px !important;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 99999;
+  top: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popuptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+/* ------------------------------ */
+/* ------------------------------ */
+/* ----- end of bePopup.css ----- */
+/* ------------------------------ */
+/* ------------------------------ */

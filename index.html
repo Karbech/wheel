@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bewise spinning</title>
+
+    <link rel="stylesheet" type="text/css" href="bewiseWheel.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+      //should the wheel be active? true/false
+      var wheelActive = true;
+
+      //for how many milliseconds the wheel turns before it begins to stop
+      var secondsWheelTurns = 2000;
+
+      // for settings the font size of a big screen
+      var wheelFontSizeDesktop = 30;
+
+      // for settings the font size of a small/mobile screen
+      var wheelFontSizeMobile = 20;
+
+      //define the url up until the rabatkode, including equals sign at the end
+      var stringWebshopRabatUrl = '/shop/frontpage.html?SalesDiscountCode=';
+
+      //array with objects that decides hvow many slices are to be put in the wheel. Decide the color(color of the slice), value(text on the slice) and a hidden value for each slice.
+      var arrayObjWheel = [
+        {
+          sliceColor: '#efefef',
+          sliceTextColor: '#000',
+          sliceText: 'GRATIS FRAGT',
+          winningText: '<strong style="font-size: 20px">Tillykke!</strong> <br />du har vundet 20% rabat som automatisk vil blive tilføjet til dit køb!',
+          rabatkode: 'ven2019',
+          startConfetti: true
+        },
+        {
+          sliceColor: '#65c8c7',
+          sliceTextColor: '#fff',
+          sliceText: '5%',
+          winningText: '<strong style="font-size: 20px">Tillykke!</strong> <br />du har vundet 5% rabat som automatisk vil blive tilføjet til dit køb!',
+          rabatkode: 'ven2019',
+          startConfetti: false
+        },
+        {
+          sliceColor: '#efefef',
+          sliceTextColor: '#000',
+          sliceText: '15%',
+          winningText: '<strong style="font-size: 20px">Tillykke!</strong> <br />du har vundet 15% rabat som automatisk vil blive tilføjet til dit køb!',
+          rabatkode: 'ven2019',
+          startConfetti: true
+        },
+        {
+          sliceColor: '#65c8c7',
+          sliceTextColor: '#fff',
+          sliceText: '10%',
+          winningText: '<strong style="font-size: 20px">Tillykke!</strong> <br />du har vundet 10% rabat som automatisk vil blive tilføjet til dit køb!',
+          rabatkode: 'ven2019',
+          startConfetti: false
+        },
+        {
+          sliceColor: '#efefef',
+          sliceTextColor: '#000',
+          sliceText: '20%',
+          winningText: '<strong style="font-size: 20px">Tillykke!</strong> <br />du har vundet 20% rabat som automatisk vil blive tilføjet til dit køb!',
+          rabatkode: 'ven2019',
+          startConfetti: true
+        },
+        {
+          sliceColor: '#65c8c7',
+          sliceTextColor: '#fff',
+          sliceText: '5%',
+          winningText: '<strong style="font-size: 20px">Tillykke!</strong> <br />du har vundet 5% rabat som automatisk vil blive tilføjet til dit køb!',
+          rabatkode: 'ven2019',
+          startConfetti: false
+        },
+        {
+          sliceColor: '#efefef',
+          sliceTextColor: '#000',
+          sliceText: '15%',
+          winningText: '<strong style="font-size: 20px">Tillykke!</strong> <br />du har vundet 15% rabat som automatisk vil blive tilføjet til dit køb!',
+          rabatkode: 'ven2019',
+          startConfetti: true
+        },
+        {
+          sliceColor: '#65c8c7',
+          sliceTextColor: '#fff',
+          sliceText: '10%',
+          winningText: '<strong style="font-size: 20px">Tillykke!</strong> <br />du har vundet 10% rabat som automatisk vil blive tilføjet til dit køb!',
+          rabatkode: 'ven2019',
+          startConfetti: false
+        }
+      ];
+    </script>
+
+    <script type="text/javascript" src="bewiseWheelLoader.js"></script>
+
+  </body>
+</html>
